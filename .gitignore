@@ -1,0 +1,11 @@
+# Terraform provider files
+**/.terraform
+# **/.terraform.lock.hcl
+
+# Terraform variable files
+# **/*.tfvars
+# **/*.auto.tfvars
+
+# Terraform state files
+**/*.tfstate
+**/*.tfstate.*
