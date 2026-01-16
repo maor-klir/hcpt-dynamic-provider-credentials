@@ -40,6 +40,12 @@ variable "azure_subscription_id" {
 ##### AWS variables for HCP Terraform integration - Dynamic provider credentials #######
 ########################################################################################
 
+variable "aws_region" {
+  type        = string
+  default     = "eu-central-1"
+  description = "The AWS region where resources will be created"
+}
+
 variable "hcpt_aws_audience" {
   type        = string
   default     = "aws.workload.identity"
