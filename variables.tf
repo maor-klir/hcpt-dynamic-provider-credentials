@@ -17,7 +17,7 @@ variable "hcpt_hostname" {
 variable "hcpt_organization_name" {
   type        = string
   default     = "maor"
-  description = "The name of our HCP Terraform organization"
+  description = "The name of the HCP Terraform organization"
 }
 
 variable "hcpt_project_name" {
@@ -26,9 +26,11 @@ variable "hcpt_project_name" {
   description = "The project under which a workspace will be created"
 }
 
+# The HCP Terraform workspace that configures dynamic provider credentials for other workspaces within the organization.
+# This enables the platform team to create HCP Terraform workspaces with pre-configured Azure authentication, scoped to specific service principals, per team.
 variable "hcpt_workspace_name" {
   type        = string
-  description = "The name of the workspace that we'd like to create and connect to Azure"
+  description = "The HCP Terraform workspace that configures dynamic provider credentials for other workspaces within the organization"
 }
 
 variable "azure_subscription_id" {
@@ -52,7 +54,7 @@ variable "hcpt_aws_audience" {
   description = "The audience value to use in run identity tokens"
 }
 ###################################################################################
-# These variables are global and are alreaady defined above for Azure integration #
+# These variables are global and are already defined above for the Azure integration #
 ###################################################################################
 # variable "hcpt_hostname" {
 #   type        = string
@@ -62,7 +64,7 @@ variable "hcpt_aws_audience" {
 
 # variable "hcpt_organization_name" {
 #   type        = string
-#   description = "The name of your HCP Terraform organization"
+#   description = "The name of the HCP Terraform organization"
 # }
 
 # variable "hcpt_project_name" {
