@@ -9,6 +9,14 @@ terraform {
       source  = "hashicorp/azuread"
       version = "~> 3.7"
     }
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.27"
+    }
+    tls = {
+      source  = "hashicorp/tls"
+      version = "~> 4.1.0"
+    }
   }
 
   cloud {
@@ -25,3 +33,5 @@ provider "azurerm" {
 }
 
 provider "azuread" {}
+
+provider "aws" {}
