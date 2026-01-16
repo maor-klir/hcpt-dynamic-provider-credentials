@@ -36,7 +36,7 @@ data "aws_iam_policy_document" "hcpt_assume_role_policy" {
     condition {
       test     = "StringLike"
       variable = "${var.hcpt_hostname}:sub"
-      values   = ["organization:${var.hcpt_organization_name}:project:${var.hcpt_project_name}:workspace:${var.hcpt_workspace_name}:run_phase:*"]
+      values   = ["organization:${var.hcpt_organization_name}:project:${var.hcpt_project_name}:workspace:*:run_phase:*"]
     }
   }
 }
