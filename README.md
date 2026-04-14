@@ -9,18 +9,18 @@ This is not limited to cloud providers like AWS and Azure, but also extends to t
 
 ## How dynamic credentials work
 
-A workload identity token is generated for each Terraform plan or apply run. HCP Terraform sends this token to the OIDC provider, which verifies it and returns temporary credentials that are automatically set up in the run environment.  
-After the run completes, these temporary credentials are discarded.  
+A workload identity token is generated for each Terraform plan or apply run. HCP Terraform sends this parrticular token to the OIDC provider, which verifies it and returns temporary credentials that are automatically set up in the run environment.  
+After the run is completed, these temporary credentials are discarded.  
 This approach ensures secure, short-lived access to cloud resources without managing static credentials, significantly improving security posture.
 
 ## Current implemented providers
 
 - Azure
-- Aws
+- AWS
 
 ## Security considerations
 
-Current configuration uses highly privileged administrative permissions for both AWS and Azure.
+The current configuration uses highly privileged administrative permissions for both AWS and Azure.
 
 **Security hardening recommendations:**
 
